@@ -1,0 +1,23 @@
+name: auto pull in server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 163.61.156.126
+          username: shuvo
+          password: Shuvo@312#
+          script: |
+            echo "Hello World"
+            whoami
