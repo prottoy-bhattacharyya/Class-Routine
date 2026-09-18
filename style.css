@@ -115,7 +115,7 @@ button{ font-family:inherit; }
   gap:20px;
 }
 .masthead-id{ display:flex; align-items:center; gap:16px; }
-.crest{ flex:none; width:52px; height:52px; }
+.crest{ flex:none; height:52px; }
 .masthead h1{
   color:var(--header-text);
   font-size:clamp(20px,3.4vw,28px);
