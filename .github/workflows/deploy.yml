@@ -15,9 +15,10 @@ jobs:
       - name: Set up SSH
         uses: appleboy/ssh-action@v1
         with:
-          host: 163.61.156.126
-          username: shuvo
-          password: Shuvo@312#
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            echo "Hello World"
+            cd ~/BUBT-Routine/Class-Routine/
+            git pull origin main
             whoami
